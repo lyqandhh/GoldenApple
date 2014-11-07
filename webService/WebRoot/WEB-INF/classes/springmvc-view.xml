@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd    
+    http://www.springframework.org/schema/tx      
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">  
+    <!-- 【配置视图解析器】 -->  
+    <!-- InternalResourceViewResolver会在ModelAndView返回的视图名前加上prefix指定的前缀，再在最后加上suffix指定的后缀 -->  
+    <!-- 由于UserController返回的ModelAndView中的视图名是userlist，故该视图解析器将在/WEB-INF/jsp/userlist.jsp处查找视图 -->  
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="prefix" value="/"/> <!-- 视图前缀 -->
+        <property name="suffix" value=".jsp"/><!-- 视图后缀 -->
+    </bean>  
+</beans>

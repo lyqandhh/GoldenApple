@@ -1,0 +1,142 @@
+body{margin: 0;padding: 0;background: white;font-size: 16px;overflow-x:hidden;overflow-y:auto;}
+li{list-style-type:none;}
+a,a:hover{text-decoration: none;}
+img{margin-bottom: 5px;}
+hr{width: 95%;border-color: #F1F1F1;}
+input[type="text"],input[type="password"]{width: 25%;height: 30px;border: 1px solid #ccc;border-radius: 3px;}
+#mainFrame{
+	height: 100%;
+	height: 620px\0;
+}
+.leftFrame{
+	height:100%;
+	width: 20%;
+	float: left;
+	background: #F9F9F9;
+}
+.rightFrame{
+	width: 80%;
+	float: left;
+	height:100%;
+	
+}
+/*收缩菜单*/
+.v{float:right;width:14px;height:14px;overflow:hidden;background:url(img/vicon.png) no-repeat;display:inline-block;margin-top:-5px;margin-bottom:-5px;}
+.v01{background-position:0 0;}
+.v02{background-position:0 -16px;}
+.vtitle{height:35px;background:#fff;line-height:35px;border:1px solid #ccb6a9;margin-top:-1px;padding-left:20px;font-size:15px;color:#4d4d4d;font-family:"\5FAE\8F6F\96C5\9ED1";cursor:pointer;}
+.vtitle2{height:35px;background:#F9F9F9;line-height:35px;border:1px solid #ccb6a9;margin-top:-1px;padding-left:20px;font-size:15px;color:#4d4d4d;font-family:"\5FAE\8F6F\96C5\9ED1";cursor:pointer;}
+.active2{
+	height:35px;background:#DFDFDF;line-height:35px;border:1px solid #ccb6a9;margin-top:-1px;padding-left:20px;font-size:15px;color:#4d4d4d;font-family:"\5FAE\8F6F\96C5\9ED1";cursor:pointer;
+}
+.vtitle_first{background:#ccc;}
+.vtitle em{margin:10px 10px 0 0;}
+.vconlist{background:#fff;}
+.vconlist li a{height:30px;line-height:30px;display:block;font-size:14px;color:#866f67;font-family:"\5FAE\8F6F\96C5\9ED1";}
+.vconlist li.select a,.vconlist li a:hover{color:#ed4948;text-decoration:none;}
+.frameTitle{
+	height: 40px;
+	font-weight: bold;
+	font-size: 0.95em;
+	vertical-align: middle;
+	text-align: left;
+	width: 100%;
+	line-height: 40px;
+}
+.frameTitle p{
+	margin-left: 25px;
+}
+
+.basicInformationDiv{
+	width: 100%;
+	color: #7F7F7F;
+	font-size:0.8em;
+	text-align: left;
+	margin-left:150px;
+}
+.nextTitle{
+	font-size: 0.8em;
+}
+.btn1{
+	height: 30px;
+	background-color: #FF8A00;
+	color:#fff;
+	cursor: pointer;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.contactWayDiv{
+	width: 100%;
+	color: #494C5C;
+	font-size:0.8em;
+	text-align: left;
+	margin-left:50px;
+	line-height: 40px;
+}
+.contactWayDiv a{
+	text-decoration: none;
+	color: #307DC5;
+}
+#areaCode{
+	width: 45px;
+}
+#telephone{
+	width: 140px;
+}
+#qq{
+	width: 140px;
+}
+.workExperienceDiv{
+	width: 100%;
+	color: #494C5C;
+	font-size:0.8em;
+	text-align: left;
+	line-height: 40px;
+	margin-left: 120px;
+}
+#serviceIntroduction,#educationBackground,#researchIntroduction{
+	width: 400px;
+	height: 130px;
+}
+.studyExperienceDiv{
+	width: 100%;
+	color: #494C5C;
+	font-size:0.8em;
+	text-align: left;
+	line-height: 40px;
+}
+.studyExperienceDiv p{
+	margin-left: 60px;
+}
+.remindSpan{
+	color: #ccc;
+}
+.credentialTable{
+	margin: 0 auto;
+	text-align: center;
+	margin-top:50px;
+	font-size: 0.8em;
+	border-color: #ccc;
+}
+.credentialTable tr:first-child{
+	background: #5B9BD5;
+	height: 20px;
+	color: #fff;
+};
+.credentialTr{
+	height: 20px;
+}
+#unitName{
+	width: 150px;
+}
+.textspan_big{
+	width: 150px;
+	display: inline-block;
+}
+.textspan_small{
+	width: 100px;
+	display: inline-block;
+}
+#birthday{
+	width: 210px;
+}

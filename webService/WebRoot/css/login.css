@@ -1,0 +1,68 @@
+body{
+	margin: 0;
+	padding:0;
+	zoom: 1;
+}
+.leftDiv{
+		background:url(img/login/logo.jpg) no-repeat #fff;
+		height:100%;
+		float: left;
+		position: relative;
+}
+.rightDiv{
+		height:400px;
+		float: right;
+		width: 100%;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-moz-box-shadow: 0px 0px 6px #AAAAAA;
+		-webkit-box-shadow: 0px 0px 6px #AAAAAA;
+		box-shadow: 0px 0px 6px #AAAAAA;
+		text-align:left;
+}
+.formLabel{
+		font-size: 14px;
+		line-height: 24px;
+		color:#666666;
+		text-align: left;
+		margin-left: 55px;
+}
+.tel{
+		height: 40px;
+		width: 70%;
+		margin: 0 auto;
+}
+.forgetPassword{
+		float: left;
+		margin-left: 55px;
+}
+.forgetPassword:hover{
+		text-decoration: none;
+}
+.btnDiv{
+		margin-top: 80px;
+		text-align: center;
+}
+#login{
+		width: 70%;
+		font-size: 20px;
+}
+#regist{
+		width: 70%;
+}
+.downloadDiv{
+		bottom: 100px;
+		right:0;
+		float: right;	
+		width: 180px;
+		text-align: left;	
+		margin-top:150px;
+}
+.downloadDiv a{
+		color:#858585;
+		font-size: 20px;
+}
+.downloadDiv a:hover{
+		text-decoration: none;
+}

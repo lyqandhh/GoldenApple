@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/iframe.css" rel="stylesheet">
+<script src="../js/area.js"></script>
+<script src="../js/department.js"></script>
+</head>
+<body>
+	<div style="height:50px;"></div>
+	<div class="frameTitle">
+		<p>工作经历</p>
+	</div>
+	<hr />
+	<div class="frameTitle">
+		<p class="nextTitle">新建工作经历</p>
+	</div>
+	<div class="workExperienceDiv">
+			<p><span class="textspan_big">工作地点</span>
+				<select name="" id="province" value="">
+				</select>
+				<select name="" id="city" value="">
+				</select>
+				<select name="" id="area" value="">
+				</select>
+			</p>
+			<p><span class="textspan_big">工作时间</span>
+				<select name="" id="startTime">
+					<option value="">请选择</option>
+				</select>
+				至
+				<select name="" id="endTime">
+					<option value="">请选择</option>
+				</select>
+			</p>
+			<p><span class="textspan_big">单位名称</span>
+				<input type="text" value="云南省昆华医院" id="unitName" />
+				级别
+				<select name="" id="hospitalLevel">
+					<option value="">三级甲等</option>
+					<option value="">三级已等</option>
+					<option value="">三级丙等</option>
+					<option value="">三级医院</option>
+					<option value="">二级医院</option>
+					<option value="">一级医院</option>
+					<option value="">其他</option>
+				</select>
+				<select name="" id="department" value="">
+				</select>
+				<select name="" id="disease" value="">
+				</select>
+			</p>
+			<p><span class="textspan_big">证书名称</span>	
+				<select name="" id="credentialsName">
+					<option value="">执业医师证</option>
+				</select>
+			</p>
+			<p>
+				<span class="textspan_big">证书级别</span>
+				<select name="" id="credentialsLevel">
+					<option value="">主任医师</option>
+				</select>
+			</p>
+			
+			<p><span class="textspan_big">证书编号</span>
+				<input type="text" value="3456712345678901" id="credentialsNumber">
+			</p>
+			<p>
+				<span class="textspan_big">擅长</span>
+				<input type="text" id="skilled">
+			</p>
+			<p>
+				<span class="textspan_big">服务介绍</span>
+				<input type="textarea" value="" id="serviceIntroduction" />
+			</p>
+			<p>
+				<span class="textspan_big">医学教育背景介绍</span>
+				<input type="textarea" value="" id="educationBackground" />
+			</p>
+			<p>
+				<span class="textspan_big">学术研究成果及获奖介绍</span>
+				<input type="textarea" value="" id="researchIntroduction" />
+			</p>
+	<script>
+			getAllArea();
+			getAllDepartment();
+	</script>
+	
+</body>
+</html>

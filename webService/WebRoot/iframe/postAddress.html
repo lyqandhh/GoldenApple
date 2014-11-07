@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/iframe.css" rel="stylesheet">
+<script src="../js/area.js"></script>
+</head>
+<body>
+	<div style="height:50px;"></div>
+	<div class="frameTitle">
+		<p>邮寄地址</p>
+	</div>
+	<hr />
+	<div class="frameTitle">
+		<p class="nextTitle">新建邮寄地址</p>
+	</div>
+	<div class="studyExperienceDiv">
+			<p>	
+				<span class="textspan_small">收件人姓名:</span>
+				<input type="text" value="" id="consigneeName" placeholder="请填写收件人姓名" />
+				<span class="remindSpan">请输入2-12个字符，支持中文、英文</span>
+			</p>
+			<p>
+				<span class="textspan_small">寄送区域:</span>
+				<select name="" id="province" value="">
+				</select>
+				<select name="" id="city">
+				</select>
+				<select name="" id="area">
+				</select>
+			</p>
+			<p>
+				<span class="textspan_small">详细地址:</span>
+				<input type="text" value="" id="detailAddress" placeholder="请填写详细地址，不含省市县" />
+				<span class="remindSpan">请输入详细地址，不含省市县</span>
+			</p>
+			<p>
+				<span class="textspan_small">邮政编码:</span>
+				<input type="text" value="" id="postalCode" placeholder="请填写6位数字">
+				<span class="remindSpan">请输入邮政编码</span>
+			</p>
+			<p>
+				<span class="textspan_small">联系电话:</span>
+				<input type="text" value="" id="contactPhone" placeholder="请填写正确的电话号码">
+				<span class="remindSpan">请输入联系电话</span>
+			</p>
+			<p>
+				<span class="textspan_small"></span>
+				<input type="checkbox" id="isDefaultAddress">设为默认地址
+			</p>
+			<p>
+				<span class="textspan_small"></span>
+				<input type="submit" value="添加地址" class="btn">
+			</p>
+	<script>
+		getAllArea();
+	</script>
+</body>
+</html>

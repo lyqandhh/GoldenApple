@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+                        http://www.springframework.org/schema/security 
+                        http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http pattern="/**	/*.jpg" security="none" />
+	<http pattern="/**/*.png" security="none" />
+	<http pattern="/**/*.gif" security="none" />
+	<http pattern="/**/*.ico" security="none" />
+	<http pattern="/**/*.css" security="none" />
+	<http pattern="/**/*.js" security="none" />
+	<http pattern="/fonts/*.*" security="none" />
+
+	<!-- spring securit 3.X新的资源放行配置方式，不受保护的资源 -->
+	<http pattern="/login.jsp" security="none" />
+	<http pattern="/login.do" security="none" />
+	<http pattern="/feedback_form.jsp" security="none" />
+	<http pattern="/register.jsp" security="none" />
+	<http pattern="/feedback/save.do" security="none" />
+	<http pattern="/feedback/toUpload.do" security="none" />
+	<http pattern="/download/**" security="none" />
+	<http pattern="/file/**" security="none" />
+	
+	<!-- 临时开放资源 -->
+	<http pattern="/feedback.jsp" security="none" />
+	<http pattern="/feedback/feedbackList.do" security="none" />
+	<http pattern="/api/**" security="none" />
+	<!-- 开启默认的拦截器 use-expressions.表示开启表达式. -->
+	<http auto-config='false' use-expressions="true">
+		<!-- 允许访问的uri -->
+		<intercept-url pattern="/tongbao/auditTongbao.do**" access="hasRole('ROLE_AUITTONGBAO')" />
+		<intercept-url pattern="/tongbao/setAuditRecharge.do**" access="hasRole('ROLE_AUITTONGBAO')" />
+		<intercept-url pattern="/tongbao/setAuditCash.do**" access="hasRole('ROLE_AUITTONGBAO')" />
+
+		<intercept-url pattern="/tongbao/recharge.do**" access="hasRole('ROLE_FINANCE')" />
+		<intercept-url pattern="/tongbao/getCompanyInfo.do**" access="hasRole('ROLE_FINANCE')" />
+		<intercept-url pattern="/tongbao/setRecharge.do**" access="hasRole('ROLE_FINANCE')" />
+
+		<intercept-url pattern="/manage/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/user/**" access="hasAnyRole('ROLE_ADMIN','ROLE_AUITTONGBAO','ROLE_TONGBAO')" />
+		<intercept-url pattern="/gqpush/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/getData.do" access="hasAnyRole('ROLE_ADMIN','ROLE_AUITTONGBAO','ROLE_TONGBAO')" />
+		<!-- 登陆页面配置 -->
+		<form-login login-page="/login.do" authentication-failure-url="/login.do?error=true" authentication-success-handler-ref="myAuthenticationSuccessHandler" />
+		<logout />
+	</http>
+
+	<beans:bean id="myAuthenticationSuccessHandler" class="cn.gqlife.security.MySimpleUrlAuthenticationSuccessHandler" />
+	<beans:bean id="boUserDetailsService" class="cn.gqlife.security.BoUserDetailsService" />
+	<beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<!-- 权限管理者 -->
+	<authentication-manager alias="authenticationManager">
+		<!-- 权限提供者 -->
+		<authentication-provider user-service-ref="boUserDetailsService">
+			<password-encoder ref="passwordEncoder" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

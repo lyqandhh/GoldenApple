@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/iframe.css" rel="stylesheet">
+<script src="../js/area.js"></script>
+</head>
+<body>
+	<div style="height:50px;"></div>
+	<div class="frameTitle">
+		<p>联系方式</p>
+	</div>
+	<hr />
+	<div class="contactWayDiv">
+			<p><span class="textspan_small">电子邮箱:</span><span id="email">249592700@qq.com</span>&nbsp;&nbsp;&nbsp;<a href="">修改</a></p>
+			<p><span class="textspan_small">手机号码:</span><span id="phoneNumber">18607037846</span>&nbsp;&nbsp;
+				<select name="" id="isshow">
+					<option value="">所有人可见</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;<a href="">修改</a></p>
+			<p><span class="textspan_small">固定电话:</span>
+				<input type="text" value="" id="areaCode" placeholder="区号" />&nbsp;
+				<input type="text" placeholder="电话" id="telephone"></p>
+			<p><span class="textspan_small">QQ号:</span>
+				<input type="password" value="" id="qq" placeholder="QQ号码" />&nbsp;&nbsp;
+				<select name="" id="isshow">
+					<option value="">所有人可见</option>
+				</select>
+			</p>
+			<p><span class="textspan_small">所在地: </span>
+				<select name="" id="province" value="">
+				</select>
+				<select name="" id="city" value="">
+				</select>
+				<select name="" id="area" value="">
+				</select>
+			</p>
+			<p><span class="textspan_small">详细地址:</span>
+				<input type="text" value="" id="detailAddress" placeholder="地址" />&nbsp;&nbsp;
+				<a href="">在地图中标注</a></p>
+			<p><span class="textspan_small"></span><input type="submit" value="保存" class="btn"></p>
+	</div>
+	<script>
+			getAllArea();
+	</script>
+	
+</body>
+</html>
